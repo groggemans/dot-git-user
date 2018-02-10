@@ -25,6 +25,13 @@ pkg.install() {
 
 ##############################################################################
 
+pkg.link() {
+    # Link users git config (.config/git should exist)
+    fs.link_file "$PKG_PATH/gituserconfig" "$ELLIPSIS_HOME/.config/git/gituserconfig"
+}
+
+##############################################################################
+
 pkg.pull() {
     # Use improved update strategy
     git remote update 2>&1 > /dev/null
@@ -33,6 +40,15 @@ pkg.pull() {
         git.pull
         pkg.link
     fi
+}
+
+##############################################################################
+
+pkg.unlink() {
+    # Remove users git config
+    rm "$ELLIPSIS_HOME/.config/git/gituserconfig"
+
+    hooks.unlink
 }
 
 ##############################################################################
