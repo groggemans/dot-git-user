@@ -1,14 +1,10 @@
 ##############################################################################
-# @file gituserconfig
-# @date January, 2016
-# @author G. Roggemans <g.roggemans@grog.be>
-# @copyright Copyright (c) GROG [https://grog.be] 2016, All Rights Reserved
-# @license MIT
-##############################################################################
 
 [user]
-	email = g.roggemans@grog.be
+	email = gertjan+git@roggemans.link
 	name = G. Roggemans
+
+##############################################################################
 
 [github]
 	user = groggemans
